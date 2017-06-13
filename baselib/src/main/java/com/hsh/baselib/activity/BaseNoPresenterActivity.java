@@ -20,10 +20,15 @@ import android.widget.Toast;
 
 import com.hsh.baselib.R;
 import com.hsh.baselib.constanst.SPConstanst;
+import com.hsh.baselib.event.DefaultEvent;
 import com.hsh.baselib.utils.AntiShake;
 import com.hsh.baselib.utils.SPUtils;
 import com.hsh.baselib.view.IBaseView;
 import com.hsh.baselib.widget.ProgressDialog;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.List;
 
@@ -61,6 +66,8 @@ public abstract class BaseNoPresenterActivity extends AppCompatActivity implemen
 
         //设置强制竖屛
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        EventBus.getDefault().register(mContext);
 
     }
 
@@ -287,5 +294,20 @@ public abstract class BaseNoPresenterActivity extends AppCompatActivity implemen
             swipeRefreshLayout.setRefreshing(flag);
         }
     }
+
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void OnDefaultEvent(DefaultEvent event) {
+        // TODO: 2017/4/1 不做实现
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(mContext);
+    }
+
 
 }

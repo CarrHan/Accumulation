@@ -1,13 +1,27 @@
 package com.carr.accumulation;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.hsh.baselib.activity.BaseNoPresenterActivity;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.OnClick;
+
+public class MainActivity extends BaseNoPresenterActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutResId() {
+        return R.layout.activity_main;
     }
+
+    @Override
+    protected void initialize() {
+
+    }
+
+    /**
+     * 点击
+     */
+    @OnClick(R.id.btnClickMe)
+    void click(){
+        showTips("Click Me");
+    }
+
 }

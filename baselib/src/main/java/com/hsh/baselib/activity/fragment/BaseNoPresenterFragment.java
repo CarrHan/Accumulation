@@ -22,11 +22,15 @@ import android.widget.Toast;
 import com.hsh.baselib.R;
 import com.hsh.baselib.activity.BaseActivity;
 import com.hsh.baselib.constanst.SPConstanst;
+import com.hsh.baselib.event.DefaultFragmentEvent;
 import com.hsh.baselib.presenter.BaseFragmentPresenter;
 import com.hsh.baselib.utils.AntiShake;
 import com.hsh.baselib.utils.SPUtils;
 import com.hsh.baselib.view.IBaseView;
 import com.hsh.baselib.widget.ProgressDialog;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
 
@@ -53,6 +57,9 @@ public abstract class BaseNoPresenterFragment extends Fragment implements IBaseV
         ButterKnife.bind(this, mContentView);
         initSwipeRefreshLayout();
         initialize();
+
+        EventBus.getDefault().register(BaseNoPresenterFragment.this);
+
         return mContentView;
     }
 
@@ -86,6 +93,7 @@ public abstract class BaseNoPresenterFragment extends Fragment implements IBaseV
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        EventBus.getDefault().unregister(BaseNoPresenterFragment.this);
         ButterKnife.unbind(this);
     }
 
@@ -317,6 +325,12 @@ public abstract class BaseNoPresenterFragment extends Fragment implements IBaseV
         if(swipeRefreshLayout!=null){
             swipeRefreshLayout.setRefreshing(flag);
         }
+    }
+
+
+    @Subscribe
+    public void OnDetaultEvent(DefaultFragmentEvent msg){
+        // TODO: 2017/4/1 不做处理
     }
 
 
