@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <!-- 自定义进度条，高仿5.0 -->
+    <declare-styleable name="progress_wheel">
+        <attr name="mat_progress_indeterminate" format="boolean" />
+        <attr name="mat_bar_color" format="color" />
+        <attr name="mat_rim_color" format="color" />
+        <attr name="mat_rim_width" format="dimension" />
+        <attr name="mat_spin_speed" format="float" />
+        <attr name="mat_bar_spin_cycle_time" format="integer" />
+        <attr name="mat_circle_radius" format="dimension" />
+        <attr name="mat_fill_radius" format="boolean" />
+        <attr name="mat_bar_width" format="dimension" />
+        <attr name="mat_linear_progress" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PointView">
+        <attr name="typeShape">
+            <enum name="typeCircel" value="0" />
+            <enum name="typeRectangle" value="1" />
+        </attr>
+        <attr name="alignModel">
+            <enum name="Right" value="3" />
+            <enum name="Center" value="4" />
+        </attr>
+        <attr name="colorSelected" format="color" />
+        <attr name="colorUnSelect" format="color" />
+        <attr name="pointSize" format="dimension" />
+        <attr name="pointSpace" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Indicator">
+        <attr name="Color" format="color" />
+        <attr name="model">
+            <enum name="TRIANGLE" value="0" />
+            <enum name="LINE" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+        <attr name="starHalf" format="reference" />
+        <attr name="clickable" format="boolean" />
+        <attr name="rating" format="float"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="DashLineHView">
+        <attr name="line_color" format="color" />
+        <attr name="line_size" format="dimension" />
+        <attr name="item_length" format="dimension" />
+        <attr name="item_space" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="textColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="umanoPanelHeight" format="dimension" />
+        <attr name="umanoShadowHeight" format="dimension" />
+        <attr name="umanoParallaxOffset" format="dimension" />
+        <attr name="umanoFadeColor" format="color" />
+        <attr name="umanoFlingVelocity" format="integer" />
+        <attr name="umanoDragView" format="reference" />
+        <attr name="umanoScrollableView" format="reference" />
+        <attr name="umanoOverlay" format="boolean" />
+        <attr name="umanoClipPanel" format="boolean" />
+        <attr name="umanoAnchorPoint" format="float" />
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference" />
+    </declare-styleable>
+
+
+</resources>

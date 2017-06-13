@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#158cff</color>
+    <color name="colorPrimaryDark">#158cff</color>
+    <color name="dividerColor">#E9E9E9</color>
+    <color name="desertStorm">#F8F8F8</color>
+    <color name="txtColor">#757575</color>
+    <color name="tipsColor">#A7A7A7</color>
+    <color name="listPress">#EEEEEE</color>
+    <color name="cranberry">#D4587A</color>
+
+    <color name="sysColor">@color/colorPrimary</color>
+    <color name="sysColorLight">#239bff</color>
+    <color name="txtColorBlack">#2d2d2d</color>
+    <color name="txtColorGrey">#666</color>
+    <color name="txtColorOrange">#ff7e01</color>
+    <color name="float_transparent">#00ffffff</color>
+    <color name="lineColor">#d6d6d6</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="bg">#f0f2f5</color>
+    <color name="lightGrey">#c9caca</color>
+    <color name="green">#00a73c</color>
+    <color name="red">#f00</color>
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <!-- A dark Holo shade of green -->
+    <color name="holo_green_dark">#ff669900</color>
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+
+
+    <!--scan code -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#00000000</color>
+
+
+
+
+
+</resources>
